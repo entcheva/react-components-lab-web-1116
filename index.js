@@ -39,8 +39,9 @@ var ButcherShop = React.createClass({
     return (
       React.createElement('div', {className: 'butcher-shop'}, [
         React.createElement('p', {}, 'Hello! We have the following products for sale today:'),
-        React.createElement('ul', {}, BUTCHER_PRODUCTS.map(item =>
-          React.createElement('li', {}, item))
+        React.createElement('ul', {}, BUTCHER_PRODUCTS.map(function(el, i, arr) {
+          return React.createElement('li', {}, el)
+        })
       ) // end array: ul content & children
       ]) // end array: div content & children
     ) // end return
